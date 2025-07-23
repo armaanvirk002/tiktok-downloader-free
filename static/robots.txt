@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Allow: /static/
+Allow: /download
+Allow: /sitemap.xml
+
+# Sitemap
+Sitemap: https://ttdownloader.com/static/sitemap.xml
+
+# Disallow temporary files
+Disallow: /tmp/
+Disallow: /*.tmp
+Disallow: /*.temp
+
+# Allow all TikTok downloader related content
+Allow: /*tiktok*
+Allow: /*download*
+Allow: /*video*
+Allow: /*watermark*
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
