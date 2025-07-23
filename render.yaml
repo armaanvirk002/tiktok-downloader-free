@@ -3,7 +3,7 @@ services:
     name: tiktok-downloader
     env: python
     buildCommand: "pip install -r requirements-deploy.txt"
-    startCommand: "gunicorn --bind 0.0.0.0:$PORT main:app"
+    startCommand: "gunicorn --bind 0.0.0.0:$PORT --workers 2 --timeout 120 wsgi:app"
     plan: free
     envVars:
       - key: PYTHON_VERSION
